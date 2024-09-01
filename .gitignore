@@ -1,3 +1,6 @@
+# Spring Boot project files
+/target/
+!.mvn/wrapper/maven-wrapper.jar
 
 # IDE settings files
 .idea
