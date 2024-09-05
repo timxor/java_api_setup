@@ -22,6 +22,13 @@ mvn clean install
 
 # run the api locally
 mvn spring-boot:run -Dspring-boot.run.profiles=local
+# or
+mvn spring-boot:run
+# or visit in the browser
+http://localhost:8080/hello?name=Tim
+
+# query the api locally
+curl -X GET "http://localhost:8080/hello?name=Tim"
 
 
 # access swagger ui
