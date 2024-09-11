@@ -22,8 +22,10 @@ mvn clean install
 
 # run the api locally
 mvn spring-boot:run -Dspring-boot.run.profiles=local
+
 # or
 mvn spring-boot:run
+
 # or visit in the browser
 http://localhost:8080/hello?name=Tim
 
@@ -31,10 +33,13 @@ http://localhost:8080/hello?name=Tim
 curl -X GET "http://localhost:8080/hello?name=Tim"
 
 
-# access swagger ui
-open http://localhost:8080/swagger-ui/
+
+# get performance stats from the query
+curl -o /dev/null -s -w "DNS resolution: %{time_namelookup}s\nTCP connection: %{time_connect}s\nSSL handshake: %{time_appconnect}s\nServer processing: %{time_starttransfer}s\nTotal time: %{time_total}s\n" "http://localhost:8080/hello?name=Tim"
+
 
 ```
+
 
 
 
