@@ -1,0 +1,3 @@
+from x
+copy . .
+cmd
