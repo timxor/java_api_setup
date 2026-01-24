@@ -48,6 +48,12 @@ Or query in browser [http://localhost:8080/hello?name=Tim](http://localhost:8080
 Open Swagger UI API docs [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 
 
+View the JSON OpenAPI spec file [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
+
+Download the YAML OpenAPI spec file [http://localhost:8080/v3/api-docs.yaml
+](http://localhost:8080/v3/api-docs.yaml
+)
+
 
 ### Open H2 Console
 
