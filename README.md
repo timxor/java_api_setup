@@ -51,8 +51,25 @@ Open Swagger UI API docs [http://localhost:8080/swagger-ui/index.html](http://lo
 View the JSON OpenAPI spec file [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
 
 Download the YAML OpenAPI spec file [http://localhost:8080/v3/api-docs.yaml
-](http://localhost:8080/v3/api-docs.yaml
-)
+](http://localhost:8080/v3/api-docs.yaml)
+
+
+## Run Unit Tests
+
+Run unit tests:
+
+```
+mvn test
+```
+
+Generate test coverage report:
+
+```
+mvn clean verify
+```
+
+View test coverage report at [file:///Users/timbo/code/java_api_setup/target/site/jacoco/index.html](file:///Users/timbo/code/java_api_setup/target/site/jacoco/index.html)
+
 
 
 ### Open H2 Console
