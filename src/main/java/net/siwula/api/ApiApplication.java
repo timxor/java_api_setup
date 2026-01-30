@@ -18,10 +18,22 @@ public class ApiApplication {
     @Profile("local")
     public ApplicationRunner openBrowser() {
         return args -> {
+
+            // Skip if running in test mode
+            if (java.util.Arrays.asList(env.getActiveProfiles()).contains("test")) {
+                System.out.println("Running in 'test' context.");
+                return;
+            } else if (java.util.Arrays.asList(env.getActiveProfiles()).contains("local")) {
+              System.out.println("Running in 'local' context.");
+            }
+            
+
             System.out.println("Attempting to open browser...");
             String url = "http://localhost:8080/swagger-ui/index.html";
             String os = System.getProperty("os.name").toLowerCase();
             Runtime rt = Runtime.getRuntime();
+
+
 
             try {
                 if (os.contains("mac")) {
