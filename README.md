@@ -125,6 +125,13 @@ brew install maven httpie jq
 ```
 
 
+## HTTP/TLS defaults
+
+- The server runs on Spring Boot's embedded Tomcat 10.1.35 (see `pom.xml` `<tomcat.version>`), which serves HTTP/1.1 traffic by default.
+- HTTPS/TLS is not configured (`src/main/resources/application.properties` has no `server.ssl.*`), so local runs are plain HTTP on port 8080; enabling TLS would use the JVM defaults (Java 21 typically negotiates TLS 1.2/1.3).
+- It is normal to leave TLS off for local/dev and configure `server.ssl.*` (and optionally `server.http2.enabled=true`) in `application.properties` or environment-specific profiles for production deployments.
+
+
 ### Performance stats
 
 Get performance state of a specific query:
